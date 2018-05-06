@@ -4,10 +4,7 @@ ADD . /var/www
 WORKDIR /var/www
 
 RUN usermod -u 1000 www-data
-RUN mkdir -p /var/www/var/cache
-RUN mkdir -p /var/www/var/logs
-RUN chmod -R 777 /var/www/var/cache
-RUN chmod -R 777 /var/www/var/logs
+RUN chmod -R 777 /var/www/var
 
 RUN apt-get update
 
