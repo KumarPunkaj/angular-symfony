@@ -1,11 +1,9 @@
-FROM node:5
+FROM node:9
 
 ADD . /var/www
 WORKDIR /var/www
 
-RUN npm install -g gulp-cli \
-  && rm -rf node_modules && rm -rf dist \
-  && npm install
+RUN npm install -g @angular/cli
 
-EXPOSE 3000
-CMD ["npm", "start"]
+EXPOSE 4200
+CMD ["ng", "serve"]

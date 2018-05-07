@@ -1,0 +1,7 @@
+<div class="grid grid-pad">
+  <a *ngFor="let todo of todos" class="col-1-4">
+    <div class="module todo">
+      <h4 class="{{todo.status}}">{{todo.title}}</h4>
+    </div>
+  </a>
+</div>
